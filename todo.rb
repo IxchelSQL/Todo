@@ -19,7 +19,11 @@ end
 class Task
   attr_reader :description
   def initialize(description)
-    @description = description.to_s
+    @description = description
+  end
+
+  def to_s
+    @description
   end
 end
 
@@ -30,6 +34,6 @@ if __FILE__ == $PROGRAM_NAME
         my_list.add(Task.new('Pick up shoes'))
         my_list.add(Task.new('Book wedding ceremony'))
         puts 'You have added a task to the Todo list.'
-        puts 'Your taks list:'
+        puts 'Your task list:'
         puts my_list.show
 end
