@@ -10,14 +10,16 @@ class List
   end
 
   def show
-    all_tasks
+    all_tasks.each do |task|
+     puts task
+    end
   end
 end
 
 class Task
   attr_reader :description
   def initialize(description)
-    @description = description
+    @description = description.to_s
   end
 end
 
